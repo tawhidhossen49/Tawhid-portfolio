@@ -1,0 +1,30 @@
+{
+  "name": "desk-dive",
+  "frameCount": 132,
+  "desktop": {
+    "dir": "desktop",
+    "ext": "webp"
+  },
+  "mobile": {
+    "dir": "mobile",
+    "ext": "webp"
+  },
+  "poster": "poster.webp",
+  "edgeColor": "#050503",
+  "edgeColorEnd": "#030302",
+  "source": {
+    "file": "desk-dive-graded.mp4",
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "trim": [
+      0.0,
+      7.6
+    ]
+  },
+  "possibleCuts": [],
+  "sizeMB": {
+    "desktop": 2.5,
+    "mobile": 0.6
+  }
+}

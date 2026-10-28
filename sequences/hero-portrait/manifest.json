@@ -1,0 +1,30 @@
+{
+  "name": "hero-portrait",
+  "frameCount": 168,
+  "desktop": {
+    "dir": "desktop",
+    "ext": "webp"
+  },
+  "mobile": {
+    "dir": "mobile",
+    "ext": "webp"
+  },
+  "poster": "poster.webp",
+  "edgeColor": "#6a553b",
+  "edgeColorEnd": "#0a0a07",
+  "source": {
+    "file": "hero-portrait.mp4",
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "trim": [
+      0.0,
+      8.15
+    ]
+  },
+  "possibleCuts": [],
+  "sizeMB": {
+    "desktop": 6.9,
+    "mobile": 2.8
+  }
+}

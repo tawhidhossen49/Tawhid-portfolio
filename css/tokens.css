@@ -1,0 +1,93 @@
+/* ==========================================================================
+   Tokens — SK Tawhid Hossen
+   3 colours, 60/30/10: Obsidian · Bone Ivory · Aged Brass
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Clash Display';
+  src: url('/assets/fonts/clash-display-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Clash Display';
+  src: url('/assets/fonts/clash-display-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Instrument Serif';
+  src: url('/assets/fonts/instrument-serif-italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter Tight';
+  src: url('/assets/fonts/inter-tight-var.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* palette */
+  --obsidian: #0F0E0C;   /* 60% base */
+  --ivory: #EFE9DF;      /* 30% surface */
+  --brass: #B08D57;      /* 10% accent — never large areas, never a gradient */
+  --brass-deep: #7A5A2E; /* brass text on ivory (5.22:1) */
+  --muted-dark: #8C857A; /* muted text on obsidian (5.28:1) */
+  --muted-light: #6B655C;/* muted text on ivory (4.78:1) */
+
+  --line-on-dark: rgb(239 233 223 / 0.12);
+  --line-on-light: rgb(15 14 12 / 0.12);
+  --line-brass: rgb(176 141 87 / 0.4);
+
+  /* type */
+  --font-display: 'Clash Display', 'Inter Tight', system-ui, sans-serif;
+  --font-serif: 'Instrument Serif', 'Times New Roman', serif;
+  --font-body: 'Inter Tight', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --fs-body: clamp(15px, 0.35vw + 14px, 17px);
+  --fs-small: 14px;
+  --fs-label: 11.5px;
+  --fs-h2: clamp(2.6rem, 6vw, 6.5rem);
+  --fs-h3: clamp(1.75rem, 3vw, 3rem);
+  --fs-lead: clamp(1.75rem, 3.4vw, 3.6rem);
+
+  /* space scale */
+  --s-1: 4px;  --s-2: 8px;  --s-3: 12px; --s-4: 16px;  --s-5: 24px;  --s-6: 32px;
+  --s-7: 48px; --s-8: 64px; --s-9: 96px; --s-10: 128px; --s-11: 192px;
+  --gutter: clamp(16px, 4vw, 64px);
+  --section-y: clamp(96px, 14vw, 192px);
+  --max: 1680px;
+
+  /* shape */
+  --radius: 12px;
+  --radius-lg: 24px;
+
+  /* motion */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1); /* ≈ expo.out */
+  --ease-in-out: cubic-bezier(0.87, 0, 0.13, 1);
+  --dur: 1s;
+
+  --nav-h: 72px;
+}
+
+/* section themes — sections alternate Obsidian ↔ Ivory */
+.theme-dark {
+  --bg: var(--obsidian);
+  --ink: var(--ivory);
+  --muted: var(--muted-dark);
+  --line: var(--line-on-dark);
+  --accent-text: var(--brass);
+}
+.theme-light {
+  --bg: var(--ivory);
+  --ink: var(--obsidian);
+  --muted: var(--muted-light);
+  --line: var(--line-on-light);
+  --accent-text: var(--brass-deep);
+}

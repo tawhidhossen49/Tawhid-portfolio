@@ -1,0 +1,5 @@
+raw-video/
+sequences/*/_qa/
+node_modules/
+.DS_Store
+Thumbs.db

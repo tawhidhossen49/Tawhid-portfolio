@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>SK Tawhid Hossen — Full-Stack Website Developer in Dhaka</title>
+  <meta name="description" content="SK Tawhid Hossen is a full-stack website developer in Dhaka, Bangladesh, at HaveStack Technologies. Business websites, landing pages, e-commerce and web apps — designed, built and deployed end to end.">
+  <meta name="theme-color" content="#0F0E0C">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SK Tawhid Hossen — Full-Stack Website Developer">
+  <meta property="og:description" content="Websites that look expensive. Designed and built end to end, from Dhaka for clients worldwide.">
+  <meta property="og:image" content="/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+  <script>
+    (function (d) {
+      var h = d.documentElement;
+      h.classList.remove('no-js');
+      h.classList.add('js');
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) h.classList.add('is-reduced');
+      var seen = false;
+      // once per visit: sessionStorage lives as long as the tab, so a new tab or a later visit replays it
+      try { seen = !!sessionStorage.getItem('tw-pl'); } catch (e) {}
+      if (/[?&]intro\b/.test(location.search)) seen = false; // add ?intro to the URL to replay the loading screen
+      h.classList.add(seen || reduce ? 'pl-skip' : 'is-loading');
+      // failsafe: if the modules never boot (offline CDN), fall back to the static page
+      setTimeout(function () {
+        if (!h.classList.contains('is-booted')) { h.classList.remove('js', 'is-loading'); h.classList.add('no-js'); }
+      }, 6000);
+    })(document);
+  </script>
+
+  <link rel="preload" href="/assets/fonts/clash-display-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/clash-display-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/sections.css">
+
+  <script type="importmap">
+  {
+    "imports": {
+      "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/index.min.js",
+      "gsap/ScrollTrigger": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/ScrollTrigger.min.js",
+      "gsap/SplitText": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/SplitText.min.js",
+      "gsap/Flip": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/Flip.min.js",
+      "lenis": "https://cdn.jsdelivr.net/npm/lenis@1.3.27/dist/lenis.min.mjs",
+      "https://cdn.jsdelivr.net/npm/gsap@3.15.0/gsap-core.js": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/gsap-core.min.js",
+      "https://cdn.jsdelivr.net/npm/gsap@3.15.0/CSSPlugin.js": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/CSSPlugin.min.js",
+      "https://cdn.jsdelivr.net/npm/gsap@3.15.0/Observer.js": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/Observer.min.js"
+    }
+  }
+  </script>
+  <script>
+    // Start the motion layer right after first paint, so CSS, fonts and the hero
+    // poster get the bandwidth first. Modules are preloaded in parallel at that point.
+    (function () {
+      var cdn = 'https://cdn.jsdelivr.net/npm/';
+      var mods = ['gsap@3.15.0/index.min.js', 'gsap@3.15.0/gsap-core.min.js', 'gsap@3.15.0/CSSPlugin.min.js',
+        'gsap@3.15.0/ScrollTrigger.min.js', 'gsap@3.15.0/Observer.min.js', 'gsap@3.15.0/SplitText.min.js',
+        'lenis@1.3.27/dist/lenis.min.mjs'];
+      function boot() {
+        mods.forEach(function (m) {
+          var l = document.createElement('link');
+          l.rel = 'modulepreload'; l.href = cdn + m; l.crossOrigin = 'anonymous';
+          document.head.appendChild(l);
+        });
+        var s = document.createElement('script');
+        s.type = 'module'; s.src = '/js/main.js';
+        document.head.appendChild(s);
+      }
+      requestAnimationFrame(function () { requestAnimationFrame(boot); });
+    })();
+  </script>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 12 12"><path d="M3.25 8.75 8.75 3.25M4.25 3.25h4.5v4.5"/></symbol>
+    <symbol id="i-down" viewBox="0 0 12 12"><path d="M6 2.5v7M2.75 6.25 6 9.5l3.25-3.25"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 12 12"><path d="M4 4h5.5v5.5H4zM2.5 8V2.5H8"/></symbol>
+    <symbol id="i-check" viewBox="0 0 12 12"><path d="m2.5 6.25 2.25 2.25L9.5 3.5"/></symbol>
+  </svg>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- 00 · "The Seam" preloader — P5 letters × P3 real counter × P6 light × P11 split exit -->
+  <div class="preloader" aria-hidden="true">
+    <div class="pl__half pl__half--top">
+      <i class="pl__light"></i>
+      <p class="pl__word"><span style="--i:0">T</span><span style="--i:1">A</span><span style="--i:2">W</span><span style="--i:3">H</span><span style="--i:4">I</span><span style="--i:5">D</span></p>
+    </div>
+    <div class="pl__half pl__half--bottom">
+      <i class="pl__light"></i>
+      <p class="pl__count"><span class="pl__num">000</span><span class="pl__pct">%</span></p>
+    </div>
+    <div class="pl__seam"><i></i></div>
+  </div>
+
+  <div class="progress" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span></span></div>
+
+  <!-- M3 nav -->
+  <header class="nav" data-nav>
+    <a class="nav__logo" href="/#top" aria-label="Tawhid — back to top">TAWHID<i>.</i></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/#services">Services</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <button class="nav__menu" type="button" aria-expanded="false" aria-controls="menu">Menu <i aria-hidden="true"></i></button>
+  </header>
+  <div class="menu theme-dark" id="menu" aria-label="Menu">
+    <nav class="menu__links" aria-label="Mobile">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/#services">Services</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <div class="menu__foot">
+      <a class="link" href="mailto:tawhidhossen449@gmail.com">tawhidhossen449@gmail.com</a>
+      <span>Dhaka, Bangladesh — available for new projects</span>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- 01 · H1 hero — scroll-scrubbed portrait clip (PIN 1) -->
+    <section id="top" class="hero theme-dark" aria-label="Introduction">
+      <div class="hero__stage">
+        <div class="hero__inner">
+          <picture class="hero__poster">
+            <source media="(max-width: 1024px) and (orientation: portrait)" srcset="/sequences/hero-portrait/mobile/0001.webp" width="608" height="1080">
+            <img src="/sequences/hero-portrait/poster.webp" alt="" width="1920" height="1080" fetchpriority="high" decoding="async">
+          </picture>
+          <canvas class="hero__canvas" aria-hidden="true"></canvas>
+          <div class="hero__scrim" aria-hidden="true"></div>
+
+          <div class="hero__caps">
+            <p class="hero__cap hero__cap--l" data-in="0.3" data-out="0.5">Websites that look <em>expensive</em>.</p>
+            <p class="hero__cap hero__cap--r" data-in="0.52" data-out="0.72"><em>Designed</em> and built end to end.</p>
+            <p class="hero__cap hero__cap--l" data-in="0.74" data-out="1">Based in Dhaka. Working <em>worldwide</em>.</p>
+          </div>
+
+          <div class="hero__base">
+            <div class="hero__meta">
+              <p class="label">SK Tawhid Hossen — Full-Stack Website Developer</p>
+              <p class="label hero__cue" aria-hidden="true">Scroll<i></i></p>
+              <p class="label hero__at"><span class="dot" aria-hidden="true"></span>Currently at HaveStack Technologies</p>
+            </div>
+            <h1 class="hero__name">
+              <span class="sr-only">SK Tawhid Hossen — Full-Stack Website Developer</span>
+              <span class="hero__word" aria-hidden="true">TAWHID</span>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 · Statement — T2 word highlight (calm) -->
+    <section id="intro" class="statement theme-light" aria-label="What I do">
+      <div class="wrap">
+        <p class="lead statement__text" data-t2>I <span class="pill" aria-hidden="true"><img src="/assets/photo/tawhid-pill.webp" alt="" width="360" height="150" loading="lazy" decoding="async"></span> design and build <em>complete</em> websites, from the first layout <span class="pill" aria-hidden="true"><img src="/assets/work/ayct/pill.webp" alt="" width="360" height="150" loading="lazy" decoding="async"></span> to the live server. Clean code, fast pages, and a finish that makes a brand look as serious as it is.</p>
+        <div class="statement__meta" data-reveal="up">
+          <p>Based in Dhaka, Bangladesh</p>
+          <p>Frontend · Backend · Deployment</p>
+          <a class="link" href="/#work">See selected work <svg class="i-arrow" aria-hidden="true"><use href="#i-down"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 · Selected work — SIGNATURE: desk-dive clip becomes the work (PIN 2) + C6 index -->
+    <section id="work" class="work theme-dark" aria-labelledby="work-title">
+      <div class="work__pin">
+      <div class="work__stage">
+        <canvas class="work__canvas" aria-hidden="true"></canvas>
+        <div class="work__flash" aria-hidden="true"></div>
+
+        <header class="work__head wrap">
+          <h2 class="h2" id="work-title" data-reveal="lines">Selected <em>work</em>.</h2>
+          <p class="work__sub muted">Three live projects, designed and built end to end.</p>
+        </header>
+
+        <ol class="work__feature">
+          <li class="feat">
+            <a class="feat__media" href="/work/ayct.html" data-cursor="View" aria-label="Amaze Youth Chess Tournament — case study">
+              <img src="/assets/work/ayct/cover.webp" srcset="/assets/work/ayct/cover-960.webp 960w, /assets/work/ayct/cover.webp 1440w" sizes="(max-width: 767px) 92vw, 58vw" alt="Amaze Youth Chess Tournament homepage: chrome chess pieces on black with a live countdown" width="1440" height="900" loading="lazy" decoding="async">
+            </a>
+            <div class="feat__info">
+              <h3 class="h3 feat__title">Amaze Youth Chess Tournament</h3>
+              <p class="feat__desc">The official home of a national youth chess championship — format, registration, a live countdown and a player portal.</p>
+              <p class="feat__tags">HTML · CSS · JavaScript · GSAP · Lenis</p>
+              <div class="feat__cta">
+                <a class="btn btn--solid" href="https://ayct-five.vercel.app" target="_blank" rel="noopener">View live <svg class="i-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                <a class="link" href="/work/ayct.html">Case study</a>
+              </div>
+            </div>
+          </li>
+          <li class="feat">
+            <a class="feat__media" href="/work/aries.html" data-cursor="View" aria-label="ARIES — case study">
+              <img src="/assets/work/aries/cover.webp" srcset="/assets/work/aries/cover-960.webp 960w, /assets/work/aries/cover.webp 1440w" sizes="(max-width: 767px) 92vw, 58vw" alt="ARIES homepage: serif headline 'Grassroots data, gathered rigorously' on deep green" width="1440" height="900" loading="lazy" decoding="async">
+            </a>
+            <div class="feat__info">
+              <h3 class="h3 feat__title">ARIES</h3>
+              <p class="feat__desc">The research hub of Amaze Consortium, presenting a grassroots education study across Bangladesh.</p>
+              <p class="feat__tags">HTML · CSS · JavaScript</p>
+              <div class="feat__cta">
+                <a class="btn btn--solid" href="https://amaze-ries.vercel.app" target="_blank" rel="noopener">View live <svg class="i-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                <a class="link" href="/work/aries.html">Case study</a>
+              </div>
+            </div>
+          </li>
+          <li class="feat">
+            <a class="feat__media" href="/work/havestack.html" data-cursor="View" aria-label="HaveStack — case study">
+              <img src="/assets/work/havestack/cover.webp" srcset="/assets/work/havestack/cover-960.webp 960w, /assets/work/havestack/cover.webp 1440w" sizes="(max-width: 767px) 92vw, 58vw" alt="HaveStack homepage: 'Build your ideas' over a dark office scene" width="1440" height="900" loading="lazy" decoding="async">
+            </a>
+            <div class="feat__info">
+              <h3 class="h3 feat__title">HaveStack</h3>
+              <p class="feat__desc">Corporate site for a Dhaka enterprise software company — practice areas, managed systems, products and how engagements run.</p>
+              <p class="feat__tags">HTML · CSS · JavaScript</p>
+              <div class="feat__cta">
+                <a class="btn btn--solid" href="https://have-stack.vercel.app" target="_blank" rel="noopener">View live <svg class="i-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                <a class="link" href="/work/havestack.html">Case study</a>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+      </div>
+
+      <!-- C6 hover-follow index of all projects -->
+      <div class="index wrap">
+        <h3 class="sr-only" id="index-title">All projects</h3>
+        <ul class="index__list" aria-labelledby="index-title">
+          <li class="row" data-img="/assets/work/ayct/cover-960.webp">
+            <span class="row__num">01</span>
+            <a class="row__main" href="/work/ayct.html"><span class="row__name">Amaze Youth Chess Tournament</span><svg class="i-arrow row__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <span class="row__type">Event website &amp; portal</span>
+            <span class="row__stack">GSAP · Lenis</span>
+            <img class="row__thumb" src="/assets/work/ayct/cover-320.webp" alt="" width="320" height="200" loading="lazy" decoding="async">
+            <a class="row__live link" href="https://ayct-five.vercel.app" target="_blank" rel="noopener" aria-label="Amaze Youth Chess Tournament — live site">Live <svg class="i-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="row" data-img="/assets/work/aries/cover-960.webp">
+            <span class="row__num">02</span>
+            <a class="row__main" href="/work/aries.html"><span class="row__name">ARIES</span><svg class="i-arrow row__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <span class="row__type">Research &amp; editorial</span>
+            <span class="row__stack">HTML · CSS · JS</span>
+            <img class="row__thumb" src="/assets/work/aries/cover-320.webp" alt="" width="320" height="200" loading="lazy" decoding="async">
+            <a class="row__live link" href="https://amaze-ries.vercel.app" target="_blank" rel="noopener" aria-label="ARIES — live site">Live <svg class="i-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="row" data-img="/assets/work/havestack/cover-960.webp">
+            <span class="row__num">03</span>
+            <a class="row__main" href="/work/havestack.html"><span class="row__name">HaveStack</span><svg class="i-arrow row__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <span class="row__type">Corporate · B2B</span>
+            <span class="row__stack">HTML · CSS · JS</span>
+            <img class="row__thumb" src="/assets/work/havestack/cover-320.webp" alt="" width="320" height="200" loading="lazy" decoding="async">
+            <a class="row__live link" href="https://have-stack.vercel.app" target="_blank" rel="noopener" aria-label="HaveStack — live site">Live <svg class="i-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="row" data-img="/assets/work/amaze-consortium/cover-960.webp">
+            <span class="row__num">04</span>
+            <a class="row__main" href="/work/amaze-consortium.html"><span class="row__name">Amaze Consortium</span><svg class="i-arrow row__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <span class="row__type">Organisation</span>
+            <span class="row__stack">GSAP · Lenis</span>
+            <img class="row__thumb" src="/assets/work/amaze-consortium/cover-320.webp" alt="" width="320" height="200" loading="lazy" decoding="async">
+            <a class="row__live link" href="https://amaze-con.vercel.app" target="_blank" rel="noopener" aria-label="Amaze Consortium — live site">Live <svg class="i-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="row" data-img="/assets/work/shahedin/cover-960.webp">
+            <span class="row__num">05</span>
+            <a class="row__main" href="/work/shahedin.html"><span class="row__name">Shahedin</span><svg class="i-arrow row__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <span class="row__type">Creator platform</span>
+            <span class="row__stack">Supabase</span>
+            <img class="row__thumb" src="/assets/work/shahedin/cover-320.webp" alt="" width="320" height="200" loading="lazy" decoding="async">
+            <a class="row__live link" href="https://2nd-shahedin-project.vercel.app" target="_blank" rel="noopener" aria-label="Shahedin — live site">Live <svg class="i-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+        </ul>
+        <div class="index__preview" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- 04 · About — S3 card → fullscreen, ABOUT / ME split (PIN 3) -->
+    <section id="about" class="about theme-light" aria-labelledby="about-title">
+      <div class="about__stage">
+        <div class="about__card">
+          <p class="about__ghost" aria-hidden="true">Full-Stack</p>
+          <div class="about__figure">
+            <div class="about__spot" aria-hidden="true"></div>
+            <img class="about__cutout" src="/assets/photo/tawhid-cutout.webp" alt="SK Tawhid Hossen in a black suit and glasses" width="457" height="1072" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <p class="about__w about__w--l" aria-hidden="true">ABOUT</p>
+        <p class="about__w about__w--r" aria-hidden="true">ME</p>
+
+        <div class="about__content">
+          <h2 class="h2" id="about-title">Design to <em>deployment</em>.</h2>
+          <p class="body">I’m Tawhid, a full-stack website developer based in Dhaka, working at HaveStack Technologies. I take a website from idea to launch myself — the design, the frontend, the backend and the deployment.</p>
+          <p class="body">My standard is simple. A site should make a brand look premium and it should load fast. Everything I build is measured against those two things.</p>
+          <dl class="about__role">
+            <div><dt>Role</dt><dd>Full-Stack Website Developer</dd></div>
+            <div><dt>Currently</dt><dd>HaveStack Technologies</dd></div>
+            <div><dt>Based in</dt><dd>Dhaka, Bangladesh</dd></div>
+          </dl>
+          <div><a class="btn btn--solid" href="/#contact">Start a project <svg class="i-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 · Toolkit — slow typographic strip (calm) -->
+    <section id="toolkit" class="toolkit theme-light" aria-labelledby="toolkit-title">
+      <div class="wrap toolkit__head">
+        <h2 class="h2" id="toolkit-title" data-reveal="lines">The <em>toolkit</em>.</h2>
+        <p class="body muted" data-reveal="up">The stack I design, build and ship with — chosen for speed, stability and a long life after launch.</p>
+      </div>
+      <ul class="sr-only">
+        <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Python</li><li>React</li><li>Next.js</li>
+        <li>Node.js</li><li>GSAP</li><li>Three.js</li><li>Git &amp; GitHub</li><li>Vercel</li>
+      </ul>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>React</span><span>Next.js</span>
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>React</span><span>Next.js</span>
+        </div>
+      </div>
+      <div class="marquee marquee--rev" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Node.js</span><span>GSAP</span><span>Three.js</span><span>Git &amp; GitHub</span><span>Vercel</span>
+          <span>Node.js</span><span>GSAP</span><span>Three.js</span><span>Git &amp; GitHub</span><span>Vercel</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 · Services — S7 stacked sticky cards -->
+    <section id="services" class="services theme-dark" aria-labelledby="services-title">
+      <div class="wrap services__head">
+        <div>
+          <h2 class="h2" id="services-title" data-reveal="lines">What I <em>build</em>.</h2>
+        </div>
+        <p class="body muted" data-reveal="up">Seven ways to work together. Each one is designed, built and launched by me, and scoped to what your project actually needs.</p>
+      </div>
+
+      <ol class="services__stack wrap">
+        <li class="svc theme-light" style="--i:0">
+          <h3 class="h3 svc__title">Business &amp; brand websites</h3>
+          <a class="link svc__cta" href="/#contact">Start this project <svg class="i-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <p class="svc__desc">A multi-page site that makes a business look established from the first click.</p>
+          <div class="svc__list">
+            <p class="label">What you get</p>
+            <ul><li>Custom design, built for your brand</li><li>Responsive on every screen size</li><li>On-page SEO and analytics</li><li>Domain, hosting and launch</li></ul>
+          </div>
+        </li>
+        <li class="svc theme-light" style="--i:1">
+          <h3 class="h3 svc__title">Landing pages</h3>
+          <a class="link svc__cta" href="/#contact">Start this project <svg class="i-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <p class="svc__desc">One page, one goal — built to turn visitors into enquiries.</p>
+          <div class="svc__list">
+            <p class="label">What you get</p>
+            <ul><li>Layout shaped around a single action</li><li>Scroll motion that stays fast</li><li>Form, booking or checkout hook-up</li><li>Analytics ready on launch day</li></ul>
+          </div>
+        </li>
+        <li class="svc theme-light" style="--i:2">
+          <h3 class="h3 svc__title">Portfolio websites</h3>
+          <a class="link svc__cta" href="/#contact">Start this project <svg class="i-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <p class="svc__desc">A personal site that shows your work with the same care it took to make it.</p>
+          <div class="svc__list">
+            <p class="label">What you get</p>
+            <ul><li>Project and case-study pages</li><li>Optimised images and video</li><li>Motion and page transitions</li><li>Simple to update after launch</li></ul>
+          </div>
+        </li>
+        <li class="svc theme-light" style="--i:3">
+          <h3 class="h3 svc__title">E-commerce stores</h3>
+          <a class="link svc__cta" href="/#contact">Start this project <svg class="i-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <p class="svc__desc">A store that feels premium and keeps the path to checkout short.</p>
+          <div class="svc__list">
+            <p class="label">What you get</p>
+            <ul><li>Product and collection pages</li><li>Cart and checkout flow</li><li>Payment gateway integration</li><li>Order and inventory admin</li></ul>
+          </div>
+        </li>
+        <li class="svc theme-light" style="--i:4">
+          <h3 class="h3 svc__title">Website redesigns</h3>
+          <a class="link svc__cta" href="/#contact">Start this project <svg class="i-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <p class="svc__desc">Your current site rebuilt to look current and load fast, without losing what already works.</p>
+          <div class="svc__list">
+            <p class="label">What you get</p>
+            <ul><li>Review of the existing site</li><li>New design on your content</li><li>Performance and SEO fixes</li><li>Careful migration and redirects</li></ul>
+          </div>
+        </li>
+        <li class="svc theme-light" style="--i:5">
+          <h3 class="h3 svc__title">Web apps &amp; custom systems</h3>
+          <a class="link svc__cta" href="/#contact">Start this project <svg class="i-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <p class="svc__desc">Dashboards, booking systems and admin panels built around how your team actually works.</p>
+          <div class="svc__list">
+            <p class="label">What you get</p>
+            <ul><li>Database and API design</li><li>User accounts and roles</li><li>Admin dashboards</li><li>Integrations with your tools</li></ul>
+          </div>
+        </li>
+        <li class="svc theme-light" style="--i:6">
+          <h3 class="h3 svc__title">Deployment, hosting &amp; maintenance</h3>
+          <a class="link svc__cta" href="/#contact">Start this project <svg class="i-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <p class="svc__desc">Your site set up properly, kept online and looked after.</p>
+          <div class="svc__list">
+            <p class="label">What you get</p>
+            <ul><li>Domain, DNS and SSL setup</li><li>Hosting on Vercel or your server</li><li>Backups and monitoring</li><li>Updates and fixes when you need them</li></ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 07 · Process — S15 drawing timeline -->
+    <section id="process" class="process theme-light" aria-labelledby="process-title">
+      <div class="wrap">
+        <h2 class="h2" id="process-title" data-reveal="lines">How it <em>works</em>.</h2>
+        <div class="tline">
+          <i class="tline__track" aria-hidden="true"></i>
+          <i class="tline__bar" aria-hidden="true"></i>
+          <ol>
+            <li><span class="tline__node" aria-hidden="true"></span><h3 class="h3">Discover</h3><p class="muted">We agree on goals, audience, pages and scope before anything is designed.</p></li>
+            <li><span class="tline__node" aria-hidden="true"></span><h3 class="h3">Design</h3><p class="muted">You see the full design first, on desktop and mobile, and we refine it together.</p></li>
+            <li><span class="tline__node" aria-hidden="true"></span><h3 class="h3">Build</h3><p class="muted">I code it clean and fast — frontend, backend and content — and test it on real devices.</p></li>
+            <li><span class="tline__node" aria-hidden="true"></span><h3 class="h3">Launch</h3><p class="muted">Domain, hosting and analytics set up, then a handover so you are never stuck.</p></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 · Contact — F2 huge CTA + T10 fill + Q5 clock -->
+    <section id="contact" class="contact theme-dark" aria-labelledby="contact-title">
+      <div class="wrap">
+        <h2 class="contact__title" id="contact-title">
+          <span data-reveal="lines">Let’s build</span>
+          <span>something <em class="fill">great</em>.</span>
+        </h2>
+        <div class="contact__actions">
+          <button class="copy" type="button" data-copy="tawhidhossen449@gmail.com" aria-describedby="copy-state">
+            <span class="copy__email">tawhidhossen449@gmail.com</span>
+            <span class="copy__state" id="copy-state" aria-live="polite"><svg class="i-arrow" aria-hidden="true"><use href="#i-copy"/></svg><span>Copy email</span></span>
+          </button>
+          <a class="link contact__mail" href="mailto:tawhidhossen449@gmail.com?subject=New%20website%20project">Or write an email <svg class="i-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+
+        <!--
+          ===== FORM SLOT =====
+          A contact form can be dropped in here later. Keep the element below,
+          remove `hidden`, and put the <form> inside it. Styling hook: .contact__form
+        -->
+        <div class="contact__form" id="contact-form-slot" data-form-slot hidden></div>
+      </div>
+
+      <footer class="foot wrap">
+        <div class="foot__status">
+          <span class="dot dot--live" aria-hidden="true"></span>
+          <span>Available for new projects</span>
+          <span class="foot__clock">Dhaka <time data-clock datetime="">--:--:--</time> GMT+6</span>
+        </div>
+        <nav class="foot__nav" aria-label="Footer">
+          <a href="/#work">Work</a>
+          <a href="/#about">About</a>
+          <a href="/#services">Services</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+        <p class="foot__copy">© <span data-year>2026</span> SK Tawhid Hossen</p>
+      </footer>
+      <div class="bookend" aria-hidden="true"><span class="bookend__word">TAWHID</span></div>
+    </section>
+
+  </main>
+</body>
+</html>

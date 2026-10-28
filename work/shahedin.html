@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Shahedin — Case study · SK Tawhid Hossen</title>
+  <meta name="description" content="A Bangla-language platform for a YouTube educator — courses, a store, featured videos and a member dashboard. Designed and built by SK Tawhid Hossen, full-stack website developer in Dhaka.">
+  <meta name="theme-color" content="#0F0E0C">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Shahedin — Case study · SK Tawhid Hossen">
+  <meta property="og:description" content="A Bangla-language platform for a YouTube educator — courses, a store, featured videos and a member dashboard.">
+  <meta property="og:image" content="/assets/work/shahedin/cover.webp">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+  <script>
+    (function (d) {
+      var h = d.documentElement;
+      h.classList.remove('no-js');
+      h.classList.add('js', 'pl-skip');
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) h.classList.add('is-reduced');
+      setTimeout(function () { if (!h.classList.contains('is-booted')) { h.classList.remove('js'); h.classList.add('no-js'); } }, 6000);
+    })(document);
+  </script>
+
+  <link rel="preload" href="/assets/fonts/clash-display-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/clash-display-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/sections.css">
+
+  <script type="importmap">
+  {
+    "imports": {
+      "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/index.min.js",
+      "gsap/ScrollTrigger": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/ScrollTrigger.min.js",
+      "gsap/SplitText": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/SplitText.min.js",
+      "gsap/Flip": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/Flip.min.js",
+      "lenis": "https://cdn.jsdelivr.net/npm/lenis@1.3.27/dist/lenis.min.mjs",
+      "https://cdn.jsdelivr.net/npm/gsap@3.15.0/gsap-core.js": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/gsap-core.min.js",
+      "https://cdn.jsdelivr.net/npm/gsap@3.15.0/CSSPlugin.js": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/CSSPlugin.min.js",
+      "https://cdn.jsdelivr.net/npm/gsap@3.15.0/Observer.js": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/Observer.min.js"
+    }
+  }
+  </script>
+  <script>
+    // Start the motion layer right after first paint, so CSS, fonts and the hero
+    // poster get the bandwidth first. Modules are preloaded in parallel at that point.
+    (function () {
+      var cdn = 'https://cdn.jsdelivr.net/npm/';
+      var mods = ['gsap@3.15.0/index.min.js', 'gsap@3.15.0/gsap-core.min.js', 'gsap@3.15.0/CSSPlugin.min.js',
+        'gsap@3.15.0/ScrollTrigger.min.js', 'gsap@3.15.0/Observer.min.js', 'gsap@3.15.0/SplitText.min.js',
+        'lenis@1.3.27/dist/lenis.min.mjs'];
+      function boot() {
+        mods.forEach(function (m) {
+          var l = document.createElement('link');
+          l.rel = 'modulepreload'; l.href = cdn + m; l.crossOrigin = 'anonymous';
+          document.head.appendChild(l);
+        });
+        var s = document.createElement('script');
+        s.type = 'module'; s.src = '/js/main.js';
+        document.head.appendChild(s);
+      }
+      requestAnimationFrame(function () { requestAnimationFrame(boot); });
+    })();
+  </script>
+</head>
+<body class="case">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 12 12"><path d="M3.25 8.75 8.75 3.25M4.25 3.25h4.5v4.5"/></symbol>
+    <symbol id="i-down" viewBox="0 0 12 12"><path d="M6 2.5v7M2.75 6.25 6 9.5l3.25-3.25"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 12 12"><path d="M4 4h5.5v5.5H4zM2.5 8V2.5H8"/></symbol>
+    <symbol id="i-check" viewBox="0 0 12 12"><path d="m2.5 6.25 2.25 2.25L9.5 3.5"/></symbol>
+  </svg>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="progress" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span></span></div>
+
+  <!-- M3 nav -->
+  <header class="nav" data-nav>
+    <a class="nav__logo" href="/#top" aria-label="Tawhid — back to top">TAWHID<i>.</i></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/#services">Services</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <button class="nav__menu" type="button" aria-expanded="false" aria-controls="menu">Menu <i aria-hidden="true"></i></button>
+  </header>
+  <div class="menu theme-dark" id="menu" aria-label="Menu">
+    <nav class="menu__links" aria-label="Mobile">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/#services">Services</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <div class="menu__foot">
+      <a class="link" href="mailto:tawhidhossen449@gmail.com">tawhidhossen449@gmail.com</a>
+      <span>Dhaka, Bangladesh — available for new projects</span>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <section class="cs-hero theme-dark" aria-labelledby="cs-title">
+      <div class="wrap">
+        <a class="link cs-back" href="/#work"><svg class="i-arrow" aria-hidden="true"><use href="#i-arrow"/></svg> All work</a>
+        <h1 class="cs-title" id="cs-title" data-reveal="lines">Shahedin</h1>
+        <p class="cs-lede" data-reveal="up">A Bangla-language platform for a YouTube educator — courses, a store, featured videos and a member dashboard.</p>
+      </div>
+      <figure class="cs-cover wrap">
+        <div class="cs-cover__frame" data-reveal="clip"><img src="/assets/work/shahedin/cover.webp" alt="Shahedin homepage: Bangla headline beside a portrait of the educator" width="1440" height="900" fetchpriority="high" decoding="async"></div>
+      </figure>
+    </section>
+
+    <section class="cs-facts theme-dark" aria-label="Project facts">
+      <dl class="wrap">
+        <div><dt>Role</dt><dd>Design &amp; full-stack development</dd></div>
+        <div><dt>Stack</dt><dd>HTML, CSS, JavaScript, Supabase, Vercel</dd></div>
+        <div><dt>Type</dt><dd>Creator platform</dd></div>
+        <div><dt>Live</dt><dd><a class="link" href="https://2nd-shahedin-project.vercel.app" target="_blank" rel="noopener">2nd-shahedin-project.vercel.app <svg class="i-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></dd></div>
+      </dl>
+    </section>
+
+    <section class="cs-body theme-light">
+      <div class="wrap">
+        <div class="cs-row">
+          <h2 class="cs-h">What it is</h2>
+          <p class="lead" data-reveal="up">Shahedin is the personal platform of a Bangla-language YouTube educator who teaches geopolitics, history, economics and soft skills. The site brings together featured videos, paid courses, a product store and his story, with sign-in and a member dashboard backed by Supabase.</p>
+        </div>
+        <div class="cs-row">
+          <h2 class="cs-h">My role</h2>
+          <p class="body" data-reveal="up">Design and full-stack development, end to end: a Bangla-first layout and type, course and store pages, Supabase-backed accounts and content, and deployment on Vercel.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-screens theme-dark" aria-labelledby="screens-title">
+      <div class="wrap">
+        <h2 class="cs-h" id="screens-title">Key screens</h2>
+        <div class="cs-screens__grid">
+          <div class="cs-pair">
+            <figure class="cs-shot cs-phone">
+              <div class="cs-shot__frame"><img src="/assets/work/shahedin/mobile.webp" alt="Shahedin on a phone" width="600" height="1298" loading="lazy" decoding="async"></div>
+              <figcaption>Mobile, 390px</figcaption>
+            </figure>
+            <figure class="cs-shot">
+              <div class="cs-shot__frame" data-parallax><img src="/assets/work/shahedin/screen-1.webp" alt="Shahedin — Featured videos" width="1440" height="900" loading="lazy" decoding="async"></div>
+              <figcaption>Featured videos</figcaption>
+            </figure>
+          </div>
+          <figure class="cs-shot">
+            <div class="cs-shot__frame" data-parallax><img src="/assets/work/shahedin/screen-2.webp" alt="Shahedin — Featured course" width="1440" height="900" loading="lazy" decoding="async"></div>
+            <figcaption>Featured course</figcaption>
+          </figure>
+          <figure class="cs-shot">
+            <div class="cs-shot__frame" data-parallax><img src="/assets/work/shahedin/screen-3.webp" alt="Shahedin — The story — from a village to an audience" width="1440" height="900" loading="lazy" decoding="async"></div>
+            <figcaption>The story — from a village to an audience</figcaption>
+          </figure>
+        </div>
+        <div class="cs-live">
+          <a class="btn btn--solid" href="https://2nd-shahedin-project.vercel.app" target="_blank" rel="noopener">View live <svg class="i-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="link" href="/#work">Back to all work</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-next theme-light" aria-label="Next project">
+      <div class="wrap">
+        <a class="next" href="/work/ayct.html" data-cursor="Next">
+          <span class="cs-h">Next project</span>
+          <span class="next__name">Amaze Youth Chess Tournament <svg class="i-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          <span class="next__img" aria-hidden="true"><img src="/assets/work/ayct/cover-960.webp" alt="" width="960" height="600" loading="lazy" decoding="async"></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 08 · Contact — F2 huge CTA + T10 fill + Q5 clock -->
+    <section id="contact" class="contact theme-dark" aria-labelledby="contact-title">
+      <div class="wrap">
+        <h2 class="contact__title" id="contact-title">
+          <span data-reveal="lines">Let’s build</span>
+          <span>something <em class="fill">great</em>.</span>
+        </h2>
+        <div class="contact__actions">
+          <button class="copy" type="button" data-copy="tawhidhossen449@gmail.com" aria-describedby="copy-state">
+            <span class="copy__email">tawhidhossen449@gmail.com</span>
+            <span class="copy__state" id="copy-state" aria-live="polite"><svg class="i-arrow" aria-hidden="true"><use href="#i-copy"/></svg><span>Copy email</span></span>
+          </button>
+          <a class="link contact__mail" href="mailto:tawhidhossen449@gmail.com?subject=New%20website%20project">Or write an email <svg class="i-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+
+        <!--
+          ===== FORM SLOT =====
+          A contact form can be dropped in here later. Keep the element below,
+          remove `hidden`, and put the <form> inside it. Styling hook: .contact__form
+        -->
+        <div class="contact__form" id="contact-form-slot" data-form-slot hidden></div>
+      </div>
+
+      <footer class="foot wrap">
+        <div class="foot__status">
+          <span class="dot dot--live" aria-hidden="true"></span>
+          <span>Available for new projects</span>
+          <span class="foot__clock">Dhaka <time data-clock datetime="">--:--:--</time> GMT+6</span>
+        </div>
+        <nav class="foot__nav" aria-label="Footer">
+          <a href="/#work">Work</a>
+          <a href="/#about">About</a>
+          <a href="/#services">Services</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+        <p class="foot__copy">© <span data-year>2026</span> SK Tawhid Hossen</p>
+      </footer>
+      <div class="bookend" aria-hidden="true"><span class="bookend__word">TAWHID</span></div>
+    </section>
+
+  </main>
+</body>
+</html>
