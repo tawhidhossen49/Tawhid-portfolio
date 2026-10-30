@@ -44,7 +44,7 @@ export function initAbout() {
       defaults: { ease: 'none' },
       scrollTrigger: {
         trigger: stage, start: 'top top', end: `+=${small ? 130 : 160}%`,
-        pin: true, pinSpacer: section, scrub: 0.8, anticipatePin: 1, invalidateOnRefresh: true,
+        pin: true, pinSpacer: stage.parentElement, scrub: 0.8, anticipatePin: 1, invalidateOnRefresh: true,
       },
     });
 

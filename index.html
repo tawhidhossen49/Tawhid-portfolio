@@ -4,16 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>SK Tawhid Hossen — Full-Stack Website Developer in Dhaka</title>
-  <meta name="description" content="SK Tawhid Hossen is a full-stack website developer in Dhaka, Bangladesh, at HaveStack Technologies. Business websites, landing pages, e-commerce and web apps — designed, built and deployed end to end.">
+  <meta name="description" content="SK Tawhid Hossen is a website developer in Dhaka, Bangladesh. Business websites, landing pages, portfolios and redesigns, designed, built and deployed end to end.">
   <meta name="theme-color" content="#0F0E0C">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="SK Tawhid Hossen — Full-Stack Website Developer">
   <meta property="og:description" content="Websites that look expensive. Designed and built end to end, from Dhaka for clients worldwide.">
-  <meta property="og:image" content="/assets/og.jpg">
+  <meta property="og:image" content="https://tawhid-portfolio.vercel.app/assets/og.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://tawhid-portfolio.vercel.app/assets/og.jpg">
 
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
@@ -288,6 +289,7 @@
 
     <!-- 04 · About — S3 card → fullscreen, ABOUT / ME split (PIN 3) -->
     <section id="about" class="about theme-light" aria-labelledby="about-title">
+      <div class="about__pin">
       <div class="about__stage">
         <div class="about__card">
           <p class="about__ghost" aria-hidden="true">Full-Stack</p>
@@ -307,34 +309,55 @@
             <div><dt>Role</dt><dd>Full-Stack Website Developer</dd></div>
             <div><dt>Currently</dt><dd>HaveStack Technologies</dd></div>
             <div><dt>Based in</dt><dd>Dhaka, Bangladesh</dd></div>
+            <div><dt>Languages</dt><dd>English and Bangla</dd></div>
           </dl>
           <div><a class="btn btn--solid" href="/#contact">Start a project <svg class="i-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
         </div>
       </div>
+      </div>
     </section>
 
-    <!-- 05 · Toolkit — slow typographic strip (calm) -->
+    <!-- 05 · Toolkit — slow typographic strip + readable stack ledger (calm).
+         Every name here comes from a scan of the five live projects' code. -->
     <section id="toolkit" class="toolkit theme-light" aria-labelledby="toolkit-title">
       <div class="wrap toolkit__head">
         <h2 class="h2" id="toolkit-title" data-reveal="lines">The <em>toolkit</em>.</h2>
-        <p class="body muted" data-reveal="up">The stack I design, build and ship with — chosen for speed, stability and a long life after launch.</p>
+        <p class="body muted" data-reveal="up">Every tool here runs in one of my five live projects.</p>
       </div>
-      <ul class="sr-only">
-        <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Python</li><li>React</li><li>Next.js</li>
-        <li>Node.js</li><li>GSAP</li><li>Three.js</li><li>Git &amp; GitHub</li><li>Vercel</li>
-      </ul>
       <div class="marquee" aria-hidden="true">
         <div class="marquee__track">
-          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>React</span><span>Next.js</span>
-          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>React</span><span>Next.js</span>
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>TypeScript</span><span>GSAP</span><span>Lenis</span><span>Eleventy</span>
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>TypeScript</span><span>GSAP</span><span>Lenis</span><span>Eleventy</span>
         </div>
       </div>
       <div class="marquee marquee--rev" aria-hidden="true">
         <div class="marquee__track">
-          <span>Node.js</span><span>GSAP</span><span>Three.js</span><span>Git &amp; GitHub</span><span>Vercel</span>
-          <span>Node.js</span><span>GSAP</span><span>Three.js</span><span>Git &amp; GitHub</span><span>Vercel</span>
+          <span>Supabase</span><span>PostgreSQL</span><span>Edge Functions</span><span>Vercel</span><span>Git &amp; GitHub</span>
+          <span>Supabase</span><span>PostgreSQL</span><span>Edge Functions</span><span>Vercel</span><span>Git &amp; GitHub</span>
         </div>
       </div>
+      <dl class="stack wrap">
+        <div class="stack__row" data-reveal="up">
+          <dt>Frontend</dt>
+          <dd class="stack__tools"><ul><li>HTML</li><li>CSS</li><li>JavaScript</li><li>GSAP</li><li>Lenis</li><li>Eleventy</li><li>Nunjucks</li></ul></dd>
+          <dd class="stack__used">All five projects</dd>
+        </div>
+        <div class="stack__row" data-reveal="up">
+          <dt>Backend</dt>
+          <dd class="stack__tools"><ul><li>Supabase</li><li>PostgreSQL</li><li>TypeScript</li><li>Edge Functions</li><li>Auth</li><li>Realtime</li><li>Storage</li></ul></dd>
+          <dd class="stack__used">Chess Tournament · HaveStack · Amaze Consortium · Shahedin</dd>
+        </div>
+        <div class="stack__row" data-reveal="up">
+          <dt>Hosting</dt>
+          <dd class="stack__tools"><ul><li>Vercel</li><li>Vercel Functions</li><li>Vercel Analytics</li><li>Git &amp; GitHub</li></ul></dd>
+          <dd class="stack__used">All five projects</dd>
+        </div>
+        <div class="stack__row" data-reveal="up">
+          <dt>Integrations</dt>
+          <dd class="stack__tools"><ul><li>bKash</li><li>BulkSMSBD</li><li>Meta Pixel</li><li>chessground</li><li>chess.js</li><li>Stockfish</li></ul></dd>
+          <dd class="stack__used">Chess Tournament · Shahedin</dd>
+        </div>
+      </dl>
     </section>
 
     <!-- 06 · Services — S7 stacked sticky cards -->
@@ -343,7 +366,7 @@
         <div>
           <h2 class="h2" id="services-title" data-reveal="lines">What I <em>build</em>.</h2>
         </div>
-        <p class="body muted" data-reveal="up">Seven ways to work together. Each one is designed, built and launched by me, and scoped to what your project actually needs.</p>
+        <p class="body muted" data-reveal="up">Four ways to work together. Each one is designed, built and launched by me, and scoped to what your project actually needs.</p>
       </div>
 
       <ol class="services__stack wrap">
@@ -362,7 +385,7 @@
           <p class="svc__desc">One page, one goal — built to turn visitors into enquiries.</p>
           <div class="svc__list">
             <p class="label">What you get</p>
-            <ul><li>Layout shaped around a single action</li><li>Scroll motion that stays fast</li><li>Form, booking or checkout hook-up</li><li>Analytics ready on launch day</li></ul>
+            <ul><li>Layout shaped around a single action</li><li>Scroll motion that stays fast</li><li>Contact or booking form hook-up</li><li>Analytics ready on launch day</li></ul>
           </div>
         </li>
         <li class="svc theme-light" style="--i:2">
@@ -375,39 +398,12 @@
           </div>
         </li>
         <li class="svc theme-light" style="--i:3">
-          <h3 class="h3 svc__title">E-commerce stores</h3>
-          <a class="link svc__cta" href="/#contact">Start this project <svg class="i-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          <p class="svc__desc">A store that feels premium and keeps the path to checkout short.</p>
-          <div class="svc__list">
-            <p class="label">What you get</p>
-            <ul><li>Product and collection pages</li><li>Cart and checkout flow</li><li>Payment gateway integration</li><li>Order and inventory admin</li></ul>
-          </div>
-        </li>
-        <li class="svc theme-light" style="--i:4">
           <h3 class="h3 svc__title">Website redesigns</h3>
           <a class="link svc__cta" href="/#contact">Start this project <svg class="i-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           <p class="svc__desc">Your current site rebuilt to look current and load fast, without losing what already works.</p>
           <div class="svc__list">
             <p class="label">What you get</p>
             <ul><li>Review of the existing site</li><li>New design on your content</li><li>Performance and SEO fixes</li><li>Careful migration and redirects</li></ul>
-          </div>
-        </li>
-        <li class="svc theme-light" style="--i:5">
-          <h3 class="h3 svc__title">Web apps &amp; custom systems</h3>
-          <a class="link svc__cta" href="/#contact">Start this project <svg class="i-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          <p class="svc__desc">Dashboards, booking systems and admin panels built around how your team actually works.</p>
-          <div class="svc__list">
-            <p class="label">What you get</p>
-            <ul><li>Database and API design</li><li>User accounts and roles</li><li>Admin dashboards</li><li>Integrations with your tools</li></ul>
-          </div>
-        </li>
-        <li class="svc theme-light" style="--i:6">
-          <h3 class="h3 svc__title">Deployment, hosting &amp; maintenance</h3>
-          <a class="link svc__cta" href="/#contact">Start this project <svg class="i-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          <p class="svc__desc">Your site set up properly, kept online and looked after.</p>
-          <div class="svc__list">
-            <p class="label">What you get</p>
-            <ul><li>Domain, DNS and SSL setup</li><li>Hosting on Vercel or your server</li><li>Backups and monitoring</li><li>Updates and fixes when you need them</li></ul>
           </div>
         </li>
       </ol>

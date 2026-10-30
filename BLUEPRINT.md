@@ -3,6 +3,13 @@
 Status: **approved 2026-10-28 · built** · Mode C (hybrid) · plain HTML/CSS/ES modules · no build step
 
 ## As built (differences from the plan below)
+- **Trim pass** (client request 2026-10-30; supersedes the plan below where they differ):
+  - **Services:** four only (Business & brand websites, Landing pages, Portfolio websites, Website redesigns). E-commerce, Web apps and Deployment/hosting/maintenance removed.
+  - **Toolkit:** every name comes from a scan of the five project repos. Python, React, Next.js, Node.js and Three.js removed. The two-row marquee stays (slightly smaller), and a readable ledger below it groups tools by Frontend / Backend / Hosting / Integrations with where each group is used. Reduced motion drops the strip because the ledger lists everything.
+  - **About:** Languages row added; role facts now a 2×2 grid; tightened spacing on screens under 800px tall.
+  - **Bug fix:** About now pins on its own `.about__pin` wrapper. Pinning on the section (which carries the -24px card overlap) left the stage 24px low.
+  - **Meta:** new description; absolute og:image and twitter:image on the home page. Case studies still use relative og:image paths.
+  - **Shahedin:** concept-project note under the lede (via `note` in `scripts/gen_cases.py`).
 - **Design upgrade pass** (client request 2026-10-28, run through the 3d-master rules: polish the signature first, layer text and objects, no new competing motion):
   - **Card-stack rhythm:** every section rises over the previous one on a 24px rounded edge (z-index climbs with page order).
   - **Statement:** editorial hanging indent (24%) plus two inline image pills set into the sentence (face, AYCT). The pills open as the reading line reaches them.

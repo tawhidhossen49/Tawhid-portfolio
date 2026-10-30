@@ -44,6 +44,7 @@ P = [
        shots=['Overview — the consortium in numbers', 'Subsidiaries — one vision, independent ventures', 'Contact — “let’s connect.”'],
        alt="Amaze Consortium homepage: 'building minds, ideas & the future.' in bold type on black"),
   dict(slug='shahedin', n='05', name='Shahedin', short='Shahedin', type='Creator platform',
+       note='<strong>Concept project:</strong> a full working demo built to show a creator platform. Audience numbers and testimonials on the live demo are sample content.',
        url='https://2nd-shahedin-project.vercel.app', stack='HTML, CSS, JavaScript, Supabase, Vercel',
        lede='A Bangla-language platform for a YouTube educator — courses, a store, featured videos and a member dashboard.',
        what='Shahedin is the personal platform of a Bangla-language YouTube educator who teaches geopolitics, history, economics and soft skills. The site brings together featured videos, paid courses, a product store and his story, with sign-in and a member dashboard backed by Supabase.',
@@ -61,6 +62,7 @@ for i, p in enumerate(P):
             <div class="cs-shot__frame" data-parallax><img src="/assets/work/{p['slug']}/screen-{k + 1}.webp" alt="{html.escape(p['short'])} — {html.escape(re.sub(r'<.*?>', '', cap))}" width="1440" height="900" loading="lazy" decoding="async"></div>
             <figcaption>{cap}</figcaption>
           </figure>''' for k, cap in enumerate(p['shots'][1:], start=1))
+    note = ('\n        <p class="cs-note" data-reveal="up">' + p['note'] + '</p>') if p.get('note') else ''
     page = f'''<!doctype html>
 <html lang="en" class="no-js">
 <head>
@@ -104,7 +106,7 @@ for i, p in enumerate(P):
       <div class="wrap">
         <a class="link cs-back" href="/#work">{ARROW} All work</a>
         <h1 class="cs-title" id="cs-title" data-reveal="lines">{p['name']}</h1>
-        <p class="cs-lede" data-reveal="up">{p['lede']}</p>
+        <p class="cs-lede" data-reveal="up">{p['lede']}</p>{note}
       </div>
       <figure class="cs-cover wrap">
         <div class="cs-cover__frame" data-reveal="clip"><img src="/assets/work/{p['slug']}/cover.webp" alt="{p['alt']}" width="1440" height="900" fetchpriority="high" decoding="async"></div>
