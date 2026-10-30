@@ -16,39 +16,39 @@ contact = re.search(r'(    <!-- 08 · Contact.*?</section>\n)', home, re.S).grou
 
 P = [
   dict(slug='ayct', n='01', name='Amaze Youth Chess Tournament', short='AYCT', type='Event website &amp; portal',
-       url='https://ayct-five.vercel.app', stack='HTML, CSS, JavaScript, GSAP (ScrollTrigger, SplitText), Lenis, Vercel',
+       url='https://ayct-five.vercel.app', stack='HTML, CSS, JavaScript, GSAP (ScrollTrigger, SplitText), Lenis, chessground, chess.js, Stockfish, Supabase, PostgreSQL, Vercel',
        lede='The official home of a national youth chess championship — format, registration, a live countdown and a player portal.',
        what='The Amaze Youth Chess Tournament is an annual championship for Bangladeshi students under 30. The site explains the whole format — an open Selection Round on Lichess, eight groups of four and a knockout road to the final — takes registrations, counts down to the first move, and leads players into a portal where every game is played live.',
-       role='Design and full-stack development, end to end: the chrome-on-black visual system, scroll-driven motion with GSAP and Lenis, the build, and deployment on Vercel.',
+       role='Design and development, end to end: the chrome-on-black visual system, scroll-driven motion with GSAP and Lenis, the build, and deployment on Vercel.',
        shots=['Opening scene — “Become legendary.”', 'Groups — eight groups, four seats each', 'The portal — one portal, four roles'],
        alt='Amaze Youth Chess Tournament homepage: chrome chess pieces on black with a live countdown'),
   dict(slug='aries', n='02', name='ARIES', short='ARIES', type='Research &amp; editorial',
-       url='https://amaze-ries.vercel.app', stack='HTML, CSS, JavaScript, Vercel',
+       url='https://amaze-ries.vercel.app', stack='HTML, CSS, JavaScript, Eleventy, Nunjucks, Vercel',
        lede='The research hub of Amaze Consortium, presenting a grassroots education study across Bangladesh.',
        what='ARIES — the Amaze Research, Innovation &amp; Exploration Society — is the research hub of Amaze Consortium. The site presents its pilot study on what students and teachers believe education is for, through three research lenses, the gaps the existing literature has not closed, and a clear path for members to join the work.',
-       role='Design and full-stack development, end to end: an editorial serif system on deep green and warm paper, the page structure for long-form research content, the build, and deployment on Vercel.',
+       role='Design and development, end to end: an editorial serif system on deep green and warm paper, the page structure for long-form research content, the build, and deployment on Vercel.',
        shots=['Focus areas — three lenses on one question', 'Research gaps — numbered, sourced entries', 'Join the network'],
        alt="ARIES homepage: serif headline 'Grassroots data, gathered rigorously' on deep green"),
   dict(slug='havestack', n='03', name='HaveStack', short='HaveStack', type='Corporate · B2B',
-       url='https://have-stack.vercel.app', stack='HTML, CSS, JavaScript, Vercel',
+       url='https://have-stack.vercel.app', stack='HTML, CSS, JavaScript, TypeScript, Supabase, PostgreSQL, Vercel',
        lede='Corporate site for a Dhaka enterprise software company — practice areas, managed systems, products and how engagements run.',
        what='HaveStack Technologies is an enterprise software practice in Dhaka that builds, integrates and maintains the systems institutions depend on. The site sets out how the company takes on work, its five practice areas, the systems it keeps under management, its own products, the sectors it serves and how an engagement runs from discovery to operations. It is also where I work.',
-       role='Design and full-stack development, end to end: a restrained dark, photographic system with a single signal accent, the information architecture for a B2B audience, the build, and deployment on Vercel.',
+       role='Design and development, end to end: a restrained dark, photographic system with a single signal accent, the information architecture for a B2B audience, the build, and deployment on Vercel.',
        shots=['Products — software the practice runs itself', 'Sectors — where these systems run', 'Delivery — how an engagement runs'],
        alt="HaveStack homepage: 'Build your ideas' over a dark office scene"),
   dict(slug='amaze-consortium', n='04', name='Amaze Consortium', short='Amaze Consortium', type='Organisation',
-       url='https://amaze-con.vercel.app', stack='HTML, CSS, JavaScript, GSAP (ScrollTrigger), Lenis, Vercel',
+       url='https://amaze-con.vercel.app', stack='HTML, CSS, JavaScript, TypeScript, GSAP (ScrollTrigger), Lenis, Supabase, PostgreSQL, Vercel',
        lede='Website for a youth-led multi-sector organisation — subsidiaries, leadership, academy and applications.',
        what='Amaze Consortium is a youth-led, multi-sector organisation that brings independently run subsidiaries under one strategic vision. The site introduces the consortium and how it is structured, its subsidiaries, founder, executive members and advisors, and the ways to get involved — internships, donations and partnerships.',
-       role='Design and full-stack development, end to end: a bold black-and-paper type system, scroll motion with GSAP and Lenis, the build, and deployment on Vercel.',
+       role='Design and development, end to end: a bold black-and-paper type system, scroll motion with GSAP and Lenis, the build, and deployment on Vercel.',
        shots=['Overview — the consortium in numbers', 'Subsidiaries — one vision, independent ventures', 'Contact — “let’s connect.”'],
        alt="Amaze Consortium homepage: 'building minds, ideas & the future.' in bold type on black"),
-  dict(slug='shahedin', n='05', name='Shahedin', short='Shahedin', type='Creator platform',
+  dict(slug='shahedin', n='05', name='Shahedin', short='Shahedin', type='Concept · Creator platform',
        note='<strong>Concept project:</strong> a full working demo built to show a creator platform. Audience numbers and testimonials on the live demo are sample content.',
-       url='https://2nd-shahedin-project.vercel.app', stack='HTML, CSS, JavaScript, Supabase, Vercel',
-       lede='A Bangla-language platform for a YouTube educator — courses, a store, featured videos and a member dashboard.',
-       what='Shahedin is the personal platform of a Bangla-language YouTube educator who teaches geopolitics, history, economics and soft skills. The site brings together featured videos, paid courses, a product store and his story, with sign-in and a member dashboard backed by Supabase.',
-       role='Design and full-stack development, end to end: a Bangla-first layout and type, course and store pages, Supabase-backed accounts and content, and deployment on Vercel.',
+       url='https://2nd-shahedin-project.vercel.app', stack='HTML, CSS, JavaScript, TypeScript, Supabase, PostgreSQL, bKash, BulkSMSBD, Meta Pixel, Vercel',
+       lede='A concept Bangla-language platform for a YouTube educator — courses, a store, featured videos and a member dashboard.',
+       what='Shahedin is a concept project: a Bangla-language platform built around a YouTube educator who teaches geopolitics, history, economics and soft skills. The demo brings together featured videos, paid courses, a product store and the educator’s story, with sign-in and a member dashboard backed by Supabase.',
+       role='Design and development, end to end: a Bangla-first layout and type, course and store pages, Supabase-backed accounts and content, and deployment on Vercel.',
        shots=['Featured videos', 'Featured course', 'The story — from a village to an audience'],
        alt='Shahedin homepage: Bangla headline beside a portrait of the educator'),
 ]
@@ -69,14 +69,17 @@ for i, p in enumerate(P):
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>{html.unescape(p['name'])} — Case study · SK Tawhid Hossen</title>
-  <meta name="description" content="{html.unescape(p['lede'])} Designed and built by SK Tawhid Hossen, full-stack website developer in Dhaka.">
+  <meta name="description" content="{html.unescape(p['lede'])} Designed and built by SK Tawhid Hossen, website developer in Dhaka.">
   <meta name="theme-color" content="#0F0E0C">
 
   <meta property="og:type" content="article">
   <meta property="og:title" content="{html.unescape(p['name'])} — Case study · SK Tawhid Hossen">
   <meta property="og:description" content="{html.unescape(p['lede'])}">
-  <meta property="og:image" content="/assets/work/{p['slug']}/cover.webp">
+  <meta property="og:image" content="https://tawhid-portfolio.vercel.app/assets/work/{p['slug']}/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://tawhid-portfolio.vercel.app/assets/work/{p['slug']}/og.jpg">
 
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
@@ -115,7 +118,7 @@ for i, p in enumerate(P):
 
     <section class="cs-facts theme-dark" aria-label="Project facts">
       <dl class="wrap">
-        <div><dt>Role</dt><dd>Design &amp; full-stack development</dd></div>
+        <div><dt>Role</dt><dd>Design &amp; development</dd></div>
         <div><dt>Stack</dt><dd>{p['stack']}</dd></div>
         <div><dt>Type</dt><dd>{p['type']}</dd></div>
         <div><dt>Live</dt><dd><a class="link" href="{p['url']}" target="_blank" rel="noopener">{p['url'].replace('https://', '')} {ARROW}</a></dd></div>

@@ -3,6 +3,7 @@
 Status: **approved 2026-10-28 · built** · Mode C (hybrid) · plain HTML/CSS/ES modules · no build step
 
 ## As built (differences from the plan below)
+- **Follow-up to the trim pass** (client request 2026-10-30): title is now "Website Developer" everywhere (including the OG image and the About ghost word, now "Developer"). Stack lines on the home page and case studies match the code scan. Each case study has an absolute 1200×630 `og.jpg` plus `twitter:image`. "Hosting" wording removed from the Business card and Launch step. Shahedin copy reads as a concept project.
 - **Trim pass** (client request 2026-10-30; supersedes the plan below where they differ):
   - **Services:** four only (Business & brand websites, Landing pages, Portfolio websites, Website redesigns). E-commerce, Web apps and Deployment/hosting/maintenance removed.
   - **Toolkit:** every name comes from a scan of the five project repos. Python, React, Next.js, Node.js and Three.js removed. The two-row marquee stays (slightly smaller), and a readable ledger below it groups tools by Frontend / Backend / Hosting / Integrations with where each group is used. Reduced motion drops the strip because the ledger lists everything.
